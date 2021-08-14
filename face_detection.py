@@ -6,7 +6,7 @@ cv.imshow('img', img)
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 # cv.imshow('Gray', gray)
 
-haar_cascade = cv.CascadeClassifier(r'C:\Users\Amit\PycharmProjects\project_work\PycharmProjects\opencv\haar_face.xml')
+haar_cascade = cv.CascadeClassifier(r'\haar_face.xml')
 faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=2)
 print(f'Number of faces found = {len(faces_rect)}')
 for (x, y, w, h) in faces_rect:
